@@ -1,1 +1,97 @@
-/* Empty. Add your own CSS if you like */
+
+.intro {
+    background-color: #D50505;
+    background-image: url("../img/home_bg1.png");
+}
+.intro1 {
+    background-image: url("../img/home_bg2.png");
+}
+
+.intro .header {
+    height: 50%;
+}
+.intro .header img {
+    margin-top: 25%;
+    width: 50%;
+}
+.intro .footer {
+    height: 50%;
+}
+
+.intro h1 {
+    color: #fff;
+    font-size: 6em;
+}
+.intro p {
+    color: #ff8a80;
+    font-size: 1.5em;
+}
+
+
+.intro .btn-enter {
+    color: #000;
+    font-weight: bold;
+    border: none;
+}
+.intro .chat {
+    background-color: #699e32;
+}
+.intro .dnd {
+    background-color: #c46350;
+}
+.intro .continue {
+    background-color: #ffe229;
+}
+
+.seat {
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 5px;
+    height: 60px;
+    padding: 20px 0;
+    position: relative;
+}
+.seat .name {
+   color: #333 !important;
+}
+.seat .id {
+   position: absolute;
+    top: 2px;
+    left: 5px;
+    font-weight: bold;
+}
+
+.seat-chat {
+    background-color: #5bff64;
+    color: #54dd5d;
+}
+
+.seat-dnd {
+    background-color: #ef5350;
+    color: #d72537;
+}
+.seat-free {
+    background-color: #ccc;
+    color: #aeaeae;
+}
+.seat-noapp {
+    background-color: #333;
+    color: #000000;
+}
+
+.intro-form {
+    position: relative;
+    left: -8px;
+}
+.intro-form label {
+    border: 0px; !important;
+}
+.intro-form .input-label {
+    color: #999 !important;
+}
+.intro-form input {
+    background: none !important;
+    color: #fff !important;
+    padding: 5px 10px !important;
+    border-bottom: 1px solid #fff;
+}

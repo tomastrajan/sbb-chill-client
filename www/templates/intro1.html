@@ -1,0 +1,58 @@
+<ion-view view-title="Intro">
+
+    <ion-content class="intro intro1" scroll="false">
+
+        <div class="row header">
+
+
+        </div>
+
+        <div class="row footer">
+
+            <div class="col col-bottom" ng-if="!isUser()">
+
+                <div class="list intro-form">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Nickname</span>
+                        <input type="text" ng-model="newUser.name">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Seat number</span>
+                        <input type="text" ng-model="newUser.seatId">
+                    </label>
+                </div>
+
+                <div class="row">
+                    <div class="col text-center">
+                        <button ng-disabled="isDisabled()" ng-click="continue()" class="button button-block btn-enter continue">
+                            Enter
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col-bottom" ng-if="isUser()">
+
+                <div class="list intro-form">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Nickname</span>
+                        <input type="text" ng-model="user.name" ng-readonly="true">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Seat number</span>
+                        <input type="text" ng-model="user.seatId" ng-readonly="true">
+                    </label>
+                </div>
+
+                <div class="row">
+                    <div class="col text-center">
+                        <button ng-click="continue1()" class="button button-block btn-enter continue">
+                            Enter
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

@@ -1,28 +1,24 @@
-<ion-view view-title="Dashboard">
-  <ion-content class="padding">
-    <div class="list card">
-      <div class="item item-divider">Recent Updates</div>
-      <div class="item item-body">
-        <div>
-          There is a fire in <b>sector 3</b>
+<ion-view view-title="Overview">
+    <ion-content class="padding">
+
+        <div class="text-center">
+            Train carriage #6
         </div>
-      </div>
-    </div>
-    <div class="list card">
-      <div class="item item-divider">Health</div>
-      <div class="item item-body">
-        <div>
-          You ate an apple today!
+
+        <div class="row" ng-repeat="row in seats">
+            <div class="col-25" ng-repeat="seat in row">
+                <div class="seat text-center"
+                     ng-class="{
+                        'seat-free': seat.free && !seat.user,
+                        'seat-noapp': !seat.free && !seat.user,
+                        'seat-chat': !seat.free && seat.user === 'chat',
+                        'seat-dnd': !seat.free && seat.user === 'dnd'
+                     }">
+                    <span class="id">{{seat.id}}</span>
+                    <span class="name">{{seat.username}}</span>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="list card">
-      <div class="item item-divider">Upcoming</div>
-      <div class="item item-body">
-        <div>
-          You have <b>29</b> meetings on your calendar tomorrow.
-        </div>
-      </div>
-    </div>
-  </ion-content>
+
+    </ion-content>
 </ion-view>

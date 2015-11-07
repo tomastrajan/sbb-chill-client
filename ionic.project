@@ -1,4 +1,14 @@
 {
   "name": "sbb-chill-client",
-  "app_id": "bed1282a"
+  "app_id": "bed1282a",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://hack.ronky.net/"
+    },
+    {
+      "path": "/socket.io",
+      "proxyUrl": "http://hack.ronky.net/socket.io"
+    }
+  ]
 }

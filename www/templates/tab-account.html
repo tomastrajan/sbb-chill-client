@@ -1,9 +1,29 @@
 <ion-view view-title="Account">
-  <ion-content>
-    <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
-    </ion-list>
-  </ion-content>
+    <ion-content>
+        <ion-list>
+            <ion-toggle ng-model="user.disturb" ng-change="persistUser()">
+                I feel like chatting
+            </ion-toggle>
+        </ion-list>
+        <div class="item item-input-inset">
+            <span class="input-label">Name</span>
+            <input type="text" ng-model="user.name" ng-change="persistUser()">
+        </div>
+        <div class="item item-input-inset">
+            <span class="input-label">Seat</span>
+            <input type="text" ng-model="user.seatId" ng-change="persistUser()">
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <button ng-click="update()" class="button button-block btn-enter chat">
+                    Save
+                </button>
+            </div>
+            <div class="col text-center">
+                <button ng-click="logout()" class="button button-block btn-enter chat">
+                    Logout
+                </button>
+            </div>
+        </div>
+    </ion-content>
 </ion-view>
